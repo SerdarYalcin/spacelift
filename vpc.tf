@@ -1,12 +1,12 @@
-resource "aws_vpc" "spacelift" {
-  cidr_block       = "192.168.10.0/24"
-  instance_tenancy = "default"
-
-  tags = {
-    Name = "test"
-  }
+provider "aws" {
+  region = "eu-central-1"
 }
 
-#comment added
-## policy updated
-## policy updatedsdsd
+resource "aws_vpc" "example_vpc" {
+  cidr_block = "10.0.0.0/16"
+
+  tags = {
+    Name = "ExampleVPC"
+    // Deliberately missing the required 'env = prod' tag
+  }
+}
