@@ -3,7 +3,7 @@ resource "aws_vpc" "spacelift" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "main"
+    Name = "test"
   }
 }
 
