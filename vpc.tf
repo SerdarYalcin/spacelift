@@ -1,17 +1,15 @@
-#provider "aws" {
-#  region = "eu-central-1"
-#}
+# provider "aws" {
+#   region = "us-west-2"  # Adjust the region as needed
+# }
 
 resource "aws_vpc" "example_vpc" {
-  cidr_block = "172.16.0.0/16"
+  cidr_block = var.cidr_block  
+
+  enable_dns_support   = true   
+  enable_dns_hostnames = true  
 
   tags = {
-    Name = "ExampleVPC"
-    // Deliberately missing the required 'env = prod' tag
+    Name = var.vpc_add
+    env  = "prod"  # Proper tagging as per the policy requirements
   }
 }
-
-## policy update2
-## test
-### test 2
-### deny
