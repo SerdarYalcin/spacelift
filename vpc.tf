@@ -10,7 +10,7 @@ resource "aws_vpc" "example_vpc" {
   enable_dns_hostnames = true  
 
   tags = {
-    Name = "NGP-VPC2"
+    Name = "NGP-VPC3"
     #Name = var.vpc_name
     env  = "prod"  # Proper tagging as per the policy requirements
   }
