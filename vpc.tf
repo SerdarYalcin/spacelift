@@ -17,4 +17,3 @@ resource "aws_vpc" "example_vpc" {
 }
 
 # test
-# test2
