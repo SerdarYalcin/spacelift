@@ -4,7 +4,7 @@
 
 resource "aws_vpc" "example_vpc" {
   #cidr_block = var.cidr_block
-  cidr_block = "192.168.101.0/24"
+  cidr_block = "192.168.200.0/24"
 
   enable_dns_support   = true   
   enable_dns_hostnames = true  
@@ -18,3 +18,4 @@ resource "aws_vpc" "example_vpc" {
 # test
 # test
 # test
+# Test CIDR
